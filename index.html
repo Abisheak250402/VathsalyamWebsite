@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VATHSALYAM - Special School</title>
   <style>
+    .section {
+  background: white;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.section:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -308,4 +328,5 @@
   </footer>
 </body>
 </html>
+
 
