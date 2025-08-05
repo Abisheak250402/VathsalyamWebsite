@@ -6,56 +6,18 @@
   <title>VATHSALYAM - Special School</title>
   <style>
     :root {
-  --bg-color: #f2f2f2;
-  --text-color: #333;
-  --card-bg: #fff;
-  --header-bg: rgba(0, 0, 0, 0.6);
-  --hover-scale: 1.02;
-}
+      --bg-color: #f2f2f2;
+      --text-color: #333;
+      --card-bg: #fff;
+      --header-bg: rgba(0, 0, 0, 0.6);
+    }
 
-body.dark {
-  --bg-color: #121212;
-  --text-color: #f0f0f0;
-  --card-bg: #1e1e1e;
-  --header-bg: rgba(255, 255, 255, 0.1);
-}
-
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.section {
-  background: var(--card-bg);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
-}
-
-header {
-  background-color: var(--header-bg);
-  backdrop-filter: blur(8px);
-}
-
-    .section {
-  background: white;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.section:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-.section:active {
-  transform: scale(0.97);
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
-}
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --card-bg: #1e1e1e;
+      --header-bg: rgba(255, 255, 255, 0.05);
+    }
 
     * {
       margin: 0;
@@ -66,13 +28,14 @@ header {
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f2f2f2;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     header {
       background: url('mission.jpeg') center/cover no-repeat;
-      padding: 60px 20px;
+      padding: 70px 20px 60px;
       text-align: center;
       color: white;
       position: relative;
@@ -81,16 +44,33 @@ header {
     }
 
     header h1 {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
+      font-size: 3.5rem;
       font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
     }
 
     header p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 500;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    #themeToggle {
+      margin: 15px auto;
+      display: block;
+      padding: 8px 16px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    #themeToggle:hover {
+      background-color: #0056b3;
     }
 
     section {
@@ -99,35 +79,42 @@ header {
       margin: auto;
     }
 
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
     .section {
-      background: white;
-      margin: 10px;
+      background: var(--card-bg);
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
       cursor: pointer;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
 
     .section:active {
       transform: scale(0.97);
-      box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
     }
 
     .section img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      display: block;
     }
 
     .section-content {
       padding: 20px;
     }
 
-    h2 {
+    .section-content h2 {
       margin-bottom: 10px;
-      color: #333;
     }
 
     footer {
@@ -137,25 +124,17 @@ header {
       text-align: center;
     }
 
-    /* Grid for services */
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
     @media (max-width: 768px) {
       .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       header h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
       }
 
       header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       .section img {
@@ -164,214 +143,90 @@ header {
     }
 
     @media (max-width: 480px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
-
       .section img {
         height: 160px;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>VATHSALYAM</h1>
     <p>SPECIAL SCHOOL FOR SPECIAL CHILDRENS</p>
   </header>
-  <button id="themeToggle" style="margin-top: 15px; padding: 8px 16px; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer;">
-  Toggle Theme
-</button>
 
+  <button id="themeToggle">🌙 Toggle Theme</button>
 
-  <!-- About -->
-  <section class="section-content">
+  <section>
     <h2>About Us</h2>
-    <p>Vathsalyam is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office with only 2 students. Over time, more than 70 students have benefited from this initiative. It supports a variety of activities to bring about cultural, economic, and social progress in rural and urban areas. Today, VATHSALYAM is located in Krishnancoil Street, Keralapuram, Kanyakumari District, and serves 35 students with the help of 4 special educators, a principal, a coordinator, and 3 helpers.</p>
+    <p>Vathsalyam is a special project of Sevabharathi, started on 17/08/2010 at Padmanabhapuram Sevabharathi office with only 2 students. More than 70 students have benefitted since. The school supports cultural, economic, and social progress. Now located in Krishnancoil Street, Keralapuram, Kanyakumari District, it has 35 students, 4 special educators, a principal, a coordinator, and 3 helpers.</p>
   </section>
 
-  <!-- Vision and Mission as Cards in Grid -->
-<section class="grid-2">
-  <div class="section">
-    <img src="vission.jpg" alt="Vision Image" />
-    <div class="section-content">
-      <h2>Vision</h2>
-      <p>"Develop the potential of each individual and stretch it into the maximum."</p>
-    </div>
-  </div>
-  <div class="section">
-    <img src="mission.jpeg" alt="Mission Image" />
-    <div class="section-content">
-      <h2>Mission</h2>
-      <p>"Together with the community to create social changes for the differently abled — make it work."</p>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Services Grid -->
+  <!-- Vision & Mission -->
   <section class="grid-2">
     <div class="section">
-      <img src="training_autism.jpg" alt="Autism Training">
+      <img src="vission.jpg" alt="Vision">
       <div class="section-content">
-        <h2>Training for Autism Students</h2>
-        <p>Training is provided for autism students. After proper rehabilitation, some are reintegrated into mainstream schools.</p>
+        <h2>Vision</h2>
+        <p>"Develop the potential of each individual and stretch it into the maximum."</p>
       </div>
     </div>
-
     <div class="section">
-      <img src="vocational_training.jpg" alt="Vocational Training">
+      <img src="mission.jpeg" alt="Mission">
       <div class="section-content">
-        <h2>Vocational Training</h2>
-        <p>Helps differently abled persons to secure and retain suitable employment through skill development.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="yoga.jpg" alt="Yoga">
-      <div class="section-content">
-        <h2>Yoga</h2>
-        <p>Yoga strengthens both body and mind, helping students with special needs manage their conditions better.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="occupational_therapy.jpeg" alt="Occupational Therapy">
-      <div class="section-content">
-        <h2>Occupational Therapy</h2>
-        <p>Improves functional independence in everyday activities. Conducted periodically by professionals.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="service-physio.jpg" alt="Physiotherapy">
-      <div class="section-content">
-        <h2>Physiotherapy</h2>
-        <p>Improves mobility and reduces physical deformities. Fun for kids and appreciated by parents.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="service-speech.jpg" alt="Speech Therapy">
-      <div class="section-content">
-        <h2>Speech Therapy</h2>
-        <p>Essential for cognitive and language development in children with developmental disabilities.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="special_education.jpg" alt="Special Education">
-      <div class="section-content">
-        <h2>Special Education</h2>
-        <p>Includes training in body movement, hygiene, communication, and academics by expert educators.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="medical_checkup.jpg" alt="Medical Checkup">
-      <div class="section-content">
-        <h2>Medical Checkup</h2>
-        <p>Biannual medical checkups and monthly medicine supplies provided by Saradha Homeo Hospital.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="healthy_foods.jpg" alt="Healthy Foods">
-      <div class="section-content">
-        <h2>Healthy Foods</h2>
-        <p>Nutritious food like sprouts, nuts, fruits, and vegetables are served to improve health and immunity.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="festive_celebration.jpg" alt="Festive Celebration">
-      <div class="section-content">
-        <h2>Festive Celebration</h2>
-        <p>All major festivals are celebrated with Sevabharathi members, sponsors, parents, and the local community.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="sports.jpg" alt="Sports Activities">
-      <div class="section-content">
-        <h2>Sports Activities</h2>
-        <p>Includes 50m, 100m, 200m runs, long jump, high jump, frog race, musical chair and more — trained by an ex-army officer.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="competition_prizes.jpg" alt="Competitions">
-      <div class="section-content">
-        <h2>Competitions and Prizes</h2>
-        <p>Students win prizes in singing, dancing, and speech events at other schools and colleges.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="outdoor_activities.jpg" alt="Outdoor Activities">
-      <div class="section-content">
-        <h2>Outdoor Activities</h2>
-        <p>Monthly trips to public and tourist spots help improve social knowledge and awareness.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="special-efforts.jpg" alt="Special Efforts">
-      <div class="section-content">
-        <h2>Special Efforts</h2>
-        <p>Slow learners are trained with the normal syllabus and sent to regular schools after their improvement.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <img src="extra_curricular.jpg" alt="Extra Curricular">
-      <div class="section-content">
-        <h2>Extra Curricular Activities</h2>
-        <p>Training includes dance, drama, GK, drawing, Bharatanatyam, reading, writing, and life skills.</p>
+        <h2>Mission</h2>
+        <p>"Together with the community to create social changes for the differently abled — make it work."</p>
       </div>
     </div>
   </section>
 
-  <!-- Final Section -->
-  <section class="section-content">
+  <!-- Services -->
+  <section class="grid-2">
+    <div class="section"><img src="training_autism.jpg" alt=""><div class="section-content"><h2>Autism Training</h2><p>Rehabilitation for autism students. Some return to mainstream schools.</p></div></div>
+    <div class="section"><img src="vocational_training.jpg" alt=""><div class="section-content"><h2>Vocational Training</h2><p>Skill-based training for employability of differently abled persons.</p></div></div>
+    <div class="section"><img src="yoga.jpg" alt=""><div class="section-content"><h2>Yoga</h2><p>Improves physical and mental well-being for better condition management.</p></div></div>
+    <div class="section"><img src="occupational_therapy.jpeg" alt=""><div class="section-content"><h2>Occupational Therapy</h2><p>Enhances daily activity independence. Periodically conducted by experts.</p></div></div>
+    <div class="section"><img src="service-physio.jpg" alt=""><div class="section-content"><h2>Physiotherapy</h2><p>Improves movement and reduces physical deformities.</p></div></div>
+    <div class="section"><img src="service-speech.jpg" alt=""><div class="section-content"><h2>Speech Therapy</h2><p>Supports communication and cognitive development in special children.</p></div></div>
+    <div class="section"><img src="special_education.jpg" alt=""><div class="section-content"><h2>Special Education</h2><p>Includes body movement, hygiene, social skills, reading and writing.</p></div></div>
+    <div class="section"><img src="medical_checkup.jpg" alt=""><div class="section-content"><h2>Medical Checkup</h2><p>Biannual health checkups with medicines from Saradha Homeo Hospital.</p></div></div>
+    <div class="section"><img src="healthy_foods.jpg" alt=""><div class="section-content"><h2>Healthy Foods</h2><p>Nutritious foods like sprouts, fruits, and nuts to improve immunity.</p></div></div>
+    <div class="section"><img src="festive_celebration.jpg" alt=""><div class="section-content"><h2>Festive Celebration</h2><p>All major festivals celebrated with sponsors and local community.</p></div></div>
+    <div class="section"><img src="sports.jpg" alt=""><div class="section-content"><h2>Sports Activities</h2><p>Events like frog race, musical chair, jumps, and races are conducted.</p></div></div>
+    <div class="section"><img src="competition_prizes.jpg" alt=""><div class="section-content"><h2>Competitions</h2><p>Prizes won in drawing, singing, dancing, and public events.</p></div></div>
+    <div class="section"><img src="outdoor_activities.jpg" alt=""><div class="section-content"><h2>Outdoor Activities</h2><p>Monthly trips to develop social knowledge and life exposure.</p></div></div>
+    <div class="section"><img src="special-efforts.jpg" alt=""><div class="section-content"><h2>Special Efforts</h2><p>Slow learners trained and transitioned into mainstream education.</p></div></div>
+    <div class="section"><img src="extra_curricular.jpg" alt=""><div class="section-content"><h2>Extra Curricular</h2><p>Includes Bharatanatyam, drama, speech, drawing, and Thirukkural.</p></div></div>
+  </section>
+
+  <!-- Donation / Support -->
+  <section>
     <h2>What Can We Do?</h2>
     <p>Events like wedding anniversaries, birthdays, and parent anniversaries can be celebrated with our children.</p>
     <h3>Current Requirements:</h3>
-    <p>ஒரு நாள் பராமரிப்பு செலவு : ₹10,000/-<br>
-    ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>
-    ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
+    <p>ஒரு நாள் பராமரிப்பு செலவு : ₹10,000/-<br>ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
 
     <h3>Bank Details:</h3>
-    <p>Bank Name: State Bank of India, Vadassery, Nagercoil<br>
-    A/C No: 34691671515<br>
-    IFSC: SBIN0000880</p>
+    <p>Bank: State Bank of India, Vadassery, Nagercoil<br>Account No: 34691671515<br>IFSC: SBIN0000880</p>
 
     <h3>Contact Info:</h3>
-    <p>Phone: 94446 18957, 94423 78957<br>
-    Email: vathsalyam2011@gmail.com</p>
+    <p>Phone: 94446 18957, 94423 78957<br>Email: vathsalyam2011@gmail.com</p>
 
-    <p><strong>Address:</strong><br>
-    Vathsalyam Special School for Intellectual Children<br>
-    Krishnancoil Street, Keralapuram,<br>
-    Thiruvithancode Post – 629174, Kanyakumari District.</p>
+    <p><strong>Address:</strong><br>Vathsalyam Special School for Intellectual Children,<br>Krishnancoil Street, Keralapuram,<br>Thiruvithancode Post – 629174,<br>Kanyakumari District.</p>
 
-    <p>Visit with your family! Request a hand with us on this service!</p>
+    <p><strong>Visit with your family! Request a hand with us on this service!</strong></p>
   </section>
 
   <footer>
     <p>© VATHSALYAM 2025 - All Rights Reserved</p>
   </footer>
-  <script>
-  const toggleBtn = document.getElementById('themeToggle');
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    toggleBtn.innerText = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-  });
-</script>
 
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggleBtn.innerText = document.body.classList.contains('dark') ? '🌞 Light Mode' : '🌙 Dark Mode';
+    });
+  </script>
 </body>
 </html>
-
-
-
