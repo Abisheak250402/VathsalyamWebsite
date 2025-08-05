@@ -22,7 +22,6 @@
       font-family: Arial, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     header {
@@ -30,9 +29,6 @@
       padding: 70px 20px 60px;
       text-align: center;
       color: white;
-      position: relative;
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
     }
 
     header h1 {
@@ -46,18 +42,6 @@
       font-size: 1.5rem;
       font-weight: 500;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    }
-
-    #langToggle {
-      margin: 15px auto;
-      display: block;
-      padding: 8px 16px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background-color: #28a745;
-      color: white;
     }
 
     section {
@@ -77,13 +61,7 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      cursor: pointer;
-    }
-
-    .section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      transition: 0.3s;
     }
 
     .section img {
@@ -107,13 +85,21 @@
       text-align: center;
     }
 
-    .tamil {
-      display: none;
-    }
-
     @media (max-width: 768px) {
       .grid-2 {
         grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .section img {
+        height: 180px;
       }
     }
   </style>
@@ -124,19 +110,9 @@
     <p>SPECIAL SCHOOL FOR SPECIAL CHILDRENS</p>
   </header>
 
-  <!-- Language Toggle -->
-  <button id="langToggle">தமிழ் / English</button>
-
-  <!-- About Us -->
   <section>
-    <div class="english">
-      <h2>About Us</h2>
-      <p>Vathsalyam is a special project of Sevabharathi, started on 17/08/2010 at Padmanabhapuram Sevabharathi office with only 2 students. More than 70 students have benefitted since. The school supports cultural, economic, and social progress. Now located in Krishnancoil Street, Keralapuram, Kanyakumari District, it has 35 students, 4 special educators, a principal, a coordinator, and 3 helpers.</p>
-    </div>
-    <div class="tamil">
-      <h2>எங்களை பற்றி</h2>
-      <p>வத்சல்யம் என்பது சேவாபாரதி இயக்கத்தின் சிறப்பு திட்டமாக 17/08/2010 அன்று தொடங்கப்பட்டது. தொடக்கத்தில் 2 மாணவர்கள் மட்டுமே இருந்தனர். தற்போது 70க்கும் மேற்பட்ட மாணவர்கள் பயனடைந்துள்ளனர். கன்னியாகுமரி மாவட்டம், கேரளாபுரம், கிருஷ்ணன்கோவில் தெருவில் அமைந்துள்ள பள்ளியில், 35 மாணவர்கள், 4 சிறப்பு ஆசிரியர்கள், முதல்வர், ஒருங்கிணைப்பாளர் மற்றும் 3 உதவியாளர்கள் உள்ளனர்.</p>
-    </div>
+    <h2>About Us</h2>
+    <p>Vathsalyam is a special project of Sevabharathi, started on 17/08/2010 at the Padmanabhapuram Sevabharathi office with only 2 students. More than 70 students have benefitted since. The school supports cultural, economic, and social progress. Now located in Krishnancoil Street, Keralapuram, Kanyakumari District, it has 35 students, 4 special educators, a principal, a coordinator, and 3 helpers.</p>
   </section>
 
   <!-- Vision & Mission -->
@@ -157,60 +133,48 @@
     </div>
   </section>
 
-  <!-- Support Section -->
+  <!-- Services -->
+  <section class="grid-2">
+    <div class="section"><img src="training_autism.jpg" alt=""><div class="section-content"><h2>Autism Training</h2><p>Rehabilitation for autism students. Some return to mainstream schools.</p></div></div>
+    <div class="section"><img src="vocational_training.jpg" alt=""><div class="section-content"><h2>Vocational Training</h2><p>Skill-based training for employability of differently abled persons.</p></div></div>
+    <div class="section"><img src="yoga.jpg" alt=""><div class="section-content"><h2>Yoga</h2><p>Improves physical and mental well-being for better condition management.</p></div></div>
+    <div class="section"><img src="occupational_therapy.jpeg" alt=""><div class="section-content"><h2>Occupational Therapy</h2><p>Enhances daily activity independence. Periodically conducted by experts.</p></div></div>
+    <div class="section"><img src="service-physio.jpg" alt=""><div class="section-content"><h2>Physiotherapy</h2><p>Improves movement and reduces physical deformities.</p></div></div>
+    <div class="section"><img src="service-speech.jpg" alt=""><div class="section-content"><h2>Speech Therapy</h2><p>Supports communication and cognitive development in special children.</p></div></div>
+    <div class="section"><img src="special_education.jpg" alt=""><div class="section-content"><h2>Special Education</h2><p>Includes body movement, hygiene, social skills, reading and writing.</p></div></div>
+    <div class="section"><img src="medical_checkup.jpg" alt=""><div class="section-content"><h2>Medical Checkup</h2><p>Biannual health checkups with medicines from Saradha Homeo Hospital.</p></div></div>
+    <div class="section"><img src="healthy_foods.jpg" alt=""><div class="section-content"><h2>Healthy Foods</h2><p>Nutritious foods like sprouts, fruits, and nuts to improve immunity.</p></div></div>
+  </section>
+
+  <!-- Activities -->
+  <section class="grid-2">
+    <div class="section"><img src="festive_celebration.jpg" alt=""><div class="section-content"><h2>Festive Celebration</h2><p>All major festivals celebrated with sponsors and local community.</p></div></div>
+    <div class="section"><img src="sports.jpg" alt=""><div class="section-content"><h2>Sports Activities</h2><p>Events like frog race, musical chair, jumps, and races are conducted.</p></div></div>
+    <div class="section"><img src="outdoor_activities.jpg" alt=""><div class="section-content"><h2>Outdoor Activities</h2><p>Monthly trips to develop social knowledge and life exposure.</p></div></div>
+    <div class="section"><img src="special-efforts.jpg" alt=""><div class="section-content"><h2>Special Efforts</h2><p>Slow learners trained and transitioned into mainstream education.</p></div></div>
+    <div class="section"><img src="extra_curricular.jpg" alt=""><div class="section-content"><h2>Extra Curricular</h2><p>Includes Bharatanatyam, drama, speech, drawing, and Thirukkural.</p></div></div>
+  </section>
+
+  <!-- Donation / Support -->
   <section>
-    <div class="english">
-      <h2>What Can We Do?</h2>
-      <p>Events like wedding anniversaries, birthdays, and parent anniversaries can be celebrated with our children.</p>
-      <h3>Current Requirements:</h3>
-      <p>One-day cost: ₹10,000/-<br>One-month cost: ₹2,00,000/-<br>One-year cost: ₹24,00,000/-</p>
+    <h2>What Can We Do?</h2>
+    <p>Events like wedding anniversaries, birthdays, and parent anniversaries can be celebrated with our children.</p>
+    <h3>Current Requirements:</h3>
+    <p>ஒரு நாள் பராமரிப்பு செலவு : ₹10,000/-<br>ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
 
-      <h3>Bank Details:</h3>
-      <p>Bank: State Bank of India, Vadassery, Nagercoil<br>Account No: 34691671515<br>IFSC: SBIN0000880</p>
+    <h3>Bank Details:</h3>
+    <p>Bank: State Bank of India, Vadassery, Nagercoil<br>Account No: 34691671515<br>IFSC: SBIN0000880</p>
 
-      <h3>Contact Info:</h3>
-      <p>Phone: 94446 18957, 94423 78957<br>Email: vathsalyam2011@gmail.com</p>
+    <h3>Contact Info:</h3>
+    <p>Phone: 94446 18957, 94423 78957<br>Email: vathsalyam2011@gmail.com</p>
 
-      <p><strong>Address:</strong><br>Vathsalyam Special School for Intellectual Children,<br>Krishnancoil Street, Keralapuram,<br>Thiruvithancode Post – 629174,<br>Kanyakumari District.</p>
+    <p><strong>Address:</strong><br>Vathsalyam Special School for Intellectual Children,<br>Krishnancoil Street, Keralapuram,<br>Thiruvithancode Post – 629174,<br>Kanyakumari District.</p>
 
-      <p><strong>Visit with your family! Request a hand with us on this service!</strong></p>
-    </div>
-
-    <div class="tamil">
-      <h2>நாம் என்ன செய்யலாம்?</h2>
-      <p>திருமண ஆண்டு விழாக்கள், பிறந்தநாள் விழாக்கள் போன்றவற்றை எங்கள் மாணவர்களுடன் கொண்டாடலாம்.</p>
-      <h3>தற்போதைய தேவைகள்:</h3>
-      <p>ஒரு நாள் பராமரிப்பு செலவு : ₹10,000/-<br>ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
-
-      <h3>வங்கிக் கணக்கு விவரங்கள்:</h3>
-      <p>வங்கி: ஸ்டேட் பாங்க் ஆஃப் இந்தியா, வடசேரி, நாகர்கோவில்<br>கணக்கு எண்: 34691671515<br>IFSC: SBIN0000880</p>
-
-      <h3>தொடர்புக்கு:</h3>
-      <p>தொலைபேசி: 94446 18957, 94423 78957<br>மின்னஞ்சல்: vathsalyam2011@gmail.com</p>
-
-      <p><strong>முகவரி:</strong><br>வத்சல்யம் சிறப்பு பள்ளி,<br>கிருஷ்ணன்கோவில் தெரு,<br>கேரளாபுரம்,<br>திருவிதாங்கோடு தபால் – 629174,<br>கன்னியாகுமரி மாவட்டம்.</p>
-
-      <p><strong>உங்கள் குடும்பத்துடன் வருகை தாருங்கள்! இந்த சேவையில் எங்களுடன் கை கோருங்கள்!</strong></p>
-    </div>
+    <p><strong>Visit with your family! Request a hand with us on this service!</strong></p>
   </section>
 
   <footer>
     <p>© VATHSALYAM 2025 - All Rights Reserved</p>
   </footer>
-
-  <!-- Language Switcher Script -->
-  <script>
-    const langBtn = document.getElementById('langToggle');
-    const englishContent = document.querySelectorAll('.english');
-    const tamilContent = document.querySelectorAll('.tamil');
-
-    let isTamil = false;
-
-    langBtn.addEventListener('click', () => {
-      isTamil = !isTamil;
-      englishContent.forEach(el => el.style.display = isTamil ? 'none' : 'block');
-      tamilContent.forEach(el => el.style.display = isTamil ? 'block' : 'none');
-    });
-  </script>
 </body>
 </html>
