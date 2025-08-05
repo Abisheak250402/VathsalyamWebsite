@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,21 +20,25 @@
 
     header {
       background: url('mission.jpeg') center/cover no-repeat;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
       color: white;
-      backdrop-filter: blur(6px);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: relative;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3.2rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
 
     section {
@@ -44,46 +47,30 @@
       margin: auto;
     }
 
-    .section-content {
-      margin-bottom: 20px;
+    .section {
       background: white;
-      padding: 20px;
+      margin: 10px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .section-content:active {
-      transform: scale(0.98);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: white;
-      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
     }
 
-    .service-card:active {
-      transform: scale(0.98);
+    .section:active {
+      transform: scale(0.97);
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
     }
 
-    .service-card img {
+    .section img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       display: block;
     }
 
-    .service-card .section-content {
-      padding: 15px 20px;
+    .section-content {
+      padding: 20px;
     }
 
     h2 {
@@ -98,13 +85,39 @@
       text-align: center;
     }
 
-    @media (max-width: 600px) {
+    /* Grid for services */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       header h1 {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
       }
 
       header p {
         font-size: 1rem;
+      }
+
+      .section img {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .section img {
+        height: 160px;
       }
     }
   </style>
@@ -116,166 +129,168 @@
     <p>SPECIAL SCHOOL FOR SPECIAL CHILDRENS</p>
   </header>
 
+  <!-- About -->
   <section class="section-content">
     <h2>About Us</h2>
-    <p>Vathsalyam is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office with only 2 students. More than 70 students have benefitted from this initiative. Currently, VATHSALYAM is located in Krishnancoil Street, Keralapuram, Kanyakumari District with 35 students, 4 Special Educators, a Principal, a Coordinator, and 3 Helpers.</p>
+    <p>Vathsalyam is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office with only 2 students. Over time, more than 70 students have benefited from this initiative. It supports a variety of activities to bring about cultural, economic, and social progress in rural and urban areas. Today, VATHSALYAM is located in Krishnancoil Street, Keralapuram, Kanyakumari District, and serves 35 students with the help of 4 special educators, a principal, a coordinator, and 3 helpers.</p>
   </section>
 
-  <section class="section-content">
-    <h2>Vision & Mission</h2>
-    <p><strong>Vision:</strong> "Develop the potential of each Individual and stretch it into the maximum."</p>
-    <p><strong>Mission:</strong> "Together with the community to create social changes for the differently abled — make it work."</p>
-  </section>
-
-  <section class="section-content">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-
-      <div class="service-card">
-        <img src="training_autism.jpg" alt="Training for Autism Students">
-        <div class="section-content">
-          <h3>Training for Autism Students</h3>
-          <p>We are providing training for autism students. Some students, after necessary rehabilitation and training, have gone back to mainstream schools.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="vocational_training.jpg" alt="Vocational Training">
-        <div class="section-content">
-          <h3>Vocational Training</h3>
-          <p>Vocational Training Centres are designed to enable differently abled persons to secure and retain suitable employment.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="yoga.jpg" alt="Yoga">
-        <div class="section-content">
-          <h3>Yoga</h3>
-          <p>Yoga helps children with special needs strengthen both their body and mind, improving their physical and mental health.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="occupational_therapy.jpeg" alt="Occupational Therapy">
-        <div class="section-content">
-          <h3>Occupational Therapy</h3>
-          <p>Helps students increase their functional independence in daily life. Periodical assessments are conducted by therapists.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="service-physio.jpg" alt="Physiotherapy">
-        <div class="section-content">
-          <h3>Physiotherapy</h3>
-          <p>Reduces physical deformities and increases mobility. Children enjoy physiotherapy and benefit greatly from it.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="service-speech.jpg" alt="Speech Therapy">
-        <div class="section-content">
-          <h3>Speech Therapy</h3>
-          <p>Essential for improving cognitive and social development among children with developmental disabilities.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="special_education.jpg" alt="Special Education">
-        <div class="section-content">
-          <h3>Special Education</h3>
-          <p>Focuses on body movement, hygiene, communication, reading, writing, calculations, etc., by qualified educators.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="medical_checkup.jpg" alt="Medical Checkup">
-        <div class="section-content">
-          <h3>Medical Checkup</h3>
-          <p>Medical checkups are conducted twice a year. Monthly medicine is supplied by Saradha Homeo Hospital.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="healthy_foods.jpg" alt="Healthy Foods">
-        <div class="section-content">
-          <h3>Healthy Foods</h3>
-          <p>Natural & nutritional foods like sprouts, fruits, nuts, and vegetables are prepared and served to improve students' immunity.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="festive_celebration.jpg" alt="Festive Celebration">
-        <div class="section-content">
-          <h3>Festive Celebration</h3>
-          <p>Functions like Yoga Day, Onam, Krishna Jayanti, Diwali, Children’s Day, Pongal, etc. are celebrated with joy and community participation.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="sports.jpg" alt="Sports Activities">
-        <div class="section-content">
-          <h3>Sports Activities</h3>
-          <p>Various sports like 50m/100m/200m running, long jump, frog race, musical chair are trained by an ex-army official.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="competition_prizes.jpg" alt="Competitions and Prizes">
-        <div class="section-content">
-          <h3>Competitions and Prizes</h3>
-          <p>Our students participate in interschool singing, dancing, and speech competitions and bring pride to our school with their talents.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="outdoor_activities.jpg" alt="Outdoor Activities">
-        <div class="section-content">
-          <h3>Outdoor Activities</h3>
-          <p>Students are taken to public and tourist places every month to develop social knowledge and outdoor experience.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="special-efforts.jpg" alt="Special Efforts">
-        <div class="section-content">
-          <h3>Special Efforts</h3>
-          <p>Slow learners are taught the normal school syllabus and sent to mainstream schools. 6 students have transitioned successfully.</p>
-        </div>
-      </div>
-
-      <div class="service-card">
-        <img src="extra_curricular.jpg" alt="Extra Curricular Activities">
-        <div class="section-content">
-          <h3>Extra Curricular Activities</h3>
-          <p>Activities like Bharatanatyam, singing, drawing, drama, reading, writing, social communication and more are trained by professionals.</p>
-        </div>
-      </div>
-
+  <!-- Vision and Mission -->
+  <section class="section">
+    <img src="vission.jpg" alt="Vision">
+    <div class="section-content">
+      <h2>Vision</h2>
+      <p>"Develop the potential of each individual and stretch it into the maximum."</p>
+      <h2>Mission</h2>
+      <p>"Together with the community to create social changes for the differently abled — make it work."</p>
     </div>
   </section>
 
+  <!-- Services Grid -->
+  <section class="grid-2">
+    <div class="section">
+      <img src="training_autism.jpg" alt="Autism Training">
+      <div class="section-content">
+        <h2>Training for Autism Students</h2>
+        <p>Training is provided for autism students. After proper rehabilitation, some are reintegrated into mainstream schools.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="vocational_training.jpg" alt="Vocational Training">
+      <div class="section-content">
+        <h2>Vocational Training</h2>
+        <p>Helps differently abled persons to secure and retain suitable employment through skill development.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="yoga.jpg" alt="Yoga">
+      <div class="section-content">
+        <h2>Yoga</h2>
+        <p>Yoga strengthens both body and mind, helping students with special needs manage their conditions better.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="occupational_therapy.jpeg" alt="Occupational Therapy">
+      <div class="section-content">
+        <h2>Occupational Therapy</h2>
+        <p>Improves functional independence in everyday activities. Conducted periodically by professionals.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="service-physio.jpg" alt="Physiotherapy">
+      <div class="section-content">
+        <h2>Physiotherapy</h2>
+        <p>Improves mobility and reduces physical deformities. Fun for kids and appreciated by parents.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="service-speech.jpg" alt="Speech Therapy">
+      <div class="section-content">
+        <h2>Speech Therapy</h2>
+        <p>Essential for cognitive and language development in children with developmental disabilities.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="special_education.jpg" alt="Special Education">
+      <div class="section-content">
+        <h2>Special Education</h2>
+        <p>Includes training in body movement, hygiene, communication, and academics by expert educators.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="medical_checkup.jpg" alt="Medical Checkup">
+      <div class="section-content">
+        <h2>Medical Checkup</h2>
+        <p>Biannual medical checkups and monthly medicine supplies provided by Saradha Homeo Hospital.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="healthy_foods.jpg" alt="Healthy Foods">
+      <div class="section-content">
+        <h2>Healthy Foods</h2>
+        <p>Nutritious food like sprouts, nuts, fruits, and vegetables are served to improve health and immunity.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="festive_celebration.jpg" alt="Festive Celebration">
+      <div class="section-content">
+        <h2>Festive Celebration</h2>
+        <p>All major festivals are celebrated with Sevabharathi members, sponsors, parents, and the local community.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="sports.jpg" alt="Sports Activities">
+      <div class="section-content">
+        <h2>Sports Activities</h2>
+        <p>Includes 50m, 100m, 200m runs, long jump, high jump, frog race, musical chair and more — trained by an ex-army officer.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="competition_prizes.jpg" alt="Competitions">
+      <div class="section-content">
+        <h2>Competitions and Prizes</h2>
+        <p>Students win prizes in singing, dancing, and speech events at other schools and colleges.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="outdoor_activities.jpg" alt="Outdoor Activities">
+      <div class="section-content">
+        <h2>Outdoor Activities</h2>
+        <p>Monthly trips to public and tourist spots help improve social knowledge and awareness.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="special-efforts.jpg" alt="Special Efforts">
+      <div class="section-content">
+        <h2>Special Efforts</h2>
+        <p>Slow learners are trained with the normal syllabus and sent to regular schools after their improvement.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="extra_curricular.jpg" alt="Extra Curricular">
+      <div class="section-content">
+        <h2>Extra Curricular Activities</h2>
+        <p>Training includes dance, drama, GK, drawing, Bharatanatyam, reading, writing, and life skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Section -->
   <section class="section-content">
     <h2>What Can We Do?</h2>
-    <p>Events such as weddings, anniversaries, and birthdays can be shared with the children at our school.</p>
+    <p>Events like wedding anniversaries, birthdays, and parent anniversaries can be celebrated with our children.</p>
     <h3>Current Requirements:</h3>
     <p>ஒரு நாள் பராமரிப்பு செலவு : ₹10,000/-<br>
-      ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>
-      ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
+    ஒரு மாத பராமரிப்பு செலவு : ₹2,00,000/-<br>
+    ஒரு வருட பராமரிப்பு செலவு : ₹24,00,000/-</p>
 
     <h3>Bank Details:</h3>
     <p>Bank Name: State Bank of India, Vadassery, Nagercoil<br>
-      Account Number: 34691671515<br>
-      IFSC Code: SBIN0000880</p>
+    A/C No: 34691671515<br>
+    IFSC: SBIN0000880</p>
 
-    <h3>Contact Information:</h3>
+    <h3>Contact Info:</h3>
     <p>Phone: 94446 18957, 94423 78957<br>
-      Email: vathsalyam2011@gmail.com</p>
+    Email: vathsalyam2011@gmail.com</p>
 
     <p><strong>Address:</strong><br>
-      Vathsalyam Special School for Intellectual Children<br>
-      Krishnancoil Street, Keralapuram,<br>
-      Thiruvithancode Post – 629174,<br>
-      Kanyakumari District.</p>
+    Vathsalyam Special School for Intellectual Children<br>
+    Krishnancoil Street, Keralapuram,<br>
+    Thiruvithancode Post – 629174, Kanyakumari District.</p>
 
     <p>Visit with your family! Request a hand with us on this service!</p>
   </section>
@@ -284,5 +299,4 @@
     <p>© VATHSALYAM 2025 - All Rights Reserved</p>
   </footer>
 </body>
-
 </html>
