@@ -1,292 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VATHSALYAM — Special School for Intellectual Children</title>
-  <meta name="description" content="VATHSALYAM — SevaBharathi's special project: school for intellectually challenged children.">
-
-  <!-- Google fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --saffron-1: #ff9d3b;
-      --saffron-2: #f36b21;
-      --muted: #f6f8fb;
-      --card: #ffffff;
-      --text: #0f1724;
-      --accent: #0b5a3b;
-      --sub: #4b5563;
-      --glass: rgba(255,255,255,0.6);
-      --radius: 12px;
-      --shadow: 0 10px 30px rgba(15,23,36,0.08);
-      --maxw: 1100px;
-    }
-
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; margin:0; color:var(--text); background:linear-gradient(180deg,var(--muted),#fff 40%); -webkit-font-smoothing:antialiased;}
-    a{color:inherit;text-decoration:none}
-
-    /* layout container */
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
-
-    /* NAVBAR */
-    .topbar{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:16px;padding:14px 0;position:sticky;top:10px;z-index:60;
-      backdrop-filter: blur(6px);
-    }
-    .brand-left{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:64px;height:64px;border-radius:10px;overflow:hidden;flex:0 0 64px;background:white;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);
-    }
-    .logo img{width:100%;height:100%;object-fit:contain;display:block}
-    .site-title{line-height:1}
-    .site-title h4{margin:0;font-family:Merriweather,serif;font-weight:700;font-size:18px}
-    .site-title p{margin:0;font-size:12px;color:var(--sub)}
-
-    .navlinks{display:flex;gap:14px;align-items:center}
-    .navlinks a{padding:8px 12px;border-radius:8px;color:var(--sub);font-weight:600;font-size:14px}
-    .navlinks a:hover{background:rgba(0,0,0,0.04);color:var(--text)}
-
-    /* CTA */
-    .cta{background:var(--accent);color:white;padding:8px 14px;border-radius:9px;font-weight:700}
-
-    /* HERO (compact but bold) */
-    header.hero{
-      margin-top:10px;
-      padding:48px 0;
-      border-radius:16px;
-      background: linear-gradient(135deg,var(--saffron-1),var(--saffron-2));
-      color:white;
-      box-shadow: var(--shadow);
-    }
-    .hero-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:24px 12px}
-    .hero-left{flex:1 1 560px;min-width:280px}
-    .hero-right{flex:0 0 220px;display:flex;align-items:center;justify-content:center}
-
-    .hero h1{
-      margin:0;
-      font-family:Merriweather,serif;
-      font-weight:800;
-      line-height:0.95;
-      color:white;
-      font-size: clamp(3rem, 8vw, 5.2rem); /* big but not full screen */
-      letter-spacing: -1px;
-      text-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-    .hero p.lead{
-      margin:14px 0 6px;
-      color:rgba(255,255,255,0.95);
-      font-size: clamp(1.05rem, 2.2vw, 1.6rem);
-      font-weight:600;
-    }
-    .hero p.small{
-      margin:0;color:rgba(255,255,255,0.92);font-style:italic;font-size:clamp(.95rem,1.6vw,1.15rem)
-    }
-
-    /* Section spacing */
-    section{padding:46px 0}
-
-    /* CARDS - Vision / Mission */
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-    .card{
-      background:var(--card);border-radius:var(--radius);overflow:hidden;padding:0;box-shadow:var(--shadow);
-      display:flex;flex-direction:column;min-height:280px;
-    }
-    .card .thumb{height:160px;overflow:hidden}
-    .card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-    .card .body{padding:18px;flex:1}
-    .card h3{margin:0 0 8px;font-size:18px;color:var(--saffron-2)}
-    .card p{margin:0;color:var(--sub);line-height:1.6}
-
-    /* ABOUT */
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
-    .about-img{border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-    .about-img img{width:100%;height:100%;object-fit:cover;display:block}
-    .about-text h2{margin-top:0;color:var(--saffron-2)}
-    .about-text p{color:var(--sub);line-height:1.7}
-
-    /* SERVICES */
-    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-    .service{
-      background:linear-gradient(180deg,#ffffff,#fff);border-radius:12px;padding:18px;text-align:center;box-shadow:0 8px 30px rgba(15,23,36,0.06)
-    }
-    .service img{width:72px;height:72px;object-fit:contain;margin-bottom:10px}
-    .service h4{margin:8px 0 6px;color:var(--accent)}
-    .service p{color:var(--sub);font-size:0.95rem}
-
-    /* CONTACT */
-    .contact{
-      background:linear-gradient(180deg,#0b3b2a,#0b5a3b);color:white;border-radius:12px;padding:24px;box-shadow:var(--shadow)
-    }
-    .contact a{color:#ffd27a;text-decoration:none;font-weight:600}
-
-    /* FOOTER */
-    footer{margin-top:30px;padding:20px 0;text-align:center;color:var(--sub);font-size:0.95rem}
-
-    /* Responsive tweaks */
-    @media (max-width:900px){
-      .hero-right{order:2;flex-basis:100%}
-      .hero-left{flex-basis:100%}
-      .topbar{padding:8px 0}
-      .logo{width:52px;height:52px;flex:0 0 52px}
-    }
-    @media (max-width:520px){
-      .navlinks{display:none} /* keep it simple on small screens; you can add a burger later */
-      .hero{padding:36px 0}
-      .hero h1{font-size: clamp(2.6rem, 12vw, 3.6rem)}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VATHSALYAM - Special School</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- top bar -->
-  <div class="wrap topbar">
-    <div class="brand-left">
-      <div class="logo" aria-hidden="true">
-        <!-- Replace with your logo file; recommended: images/logo.png -->
-        <img src="images/logo.png" alt="VATHSALYAM Logo" onerror="this.style.display='block';this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22><rect fill=%22%23ffffff%22 width=%2264%22 height=%2264%22 rx=%2210%22/><text x=%2232%22 y=%2238%22 font-size=%2228%22 text-anchor=%22middle%22 fill=%22%23f36b21%22 font-family=%22Merriweather,serif%22>V</text></svg>';">
-      </div>
-      <div class="site-title">
-        <h4>VATHSALYAM</h4>
-        <p>SevaBharathi's Special Project</p>
-      </div>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="logo-container">
+    <img src="images/logo.jpg" alt="Vathsalyam Logo" class="site-logo">
+    <div class="school-title">
+      <h1>VATHSALYAM</h1>
+      <p class="tagline">Special School for Intellectual Children</p>
+      <p class="sub-tagline">SevaBharathi’s Special Project</p>
     </div>
-
-    <nav class="navlinks" role="navigation" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#vision-mission">Vision</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a class="cta" href="#contact">Get in Touch</a>
-    </nav>
   </div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
 
-  <!-- HERO -->
-  <header class="hero wrap">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <h1>VATHSALYAM</h1>
-        <p class="lead">Special School for Intellectual Children</p>
-        <p class="small">SevaBharathi’s Special Project</p>
-      </div>
-      <div class="hero-right">
-        <!-- optional small card with quick info -->
-        <div style="background:rgba(255,255,255,0.12);padding:14px 18px;border-radius:10px;color:white;text-align:center;backdrop-filter:blur(6px)">
-          <div style="font-weight:700;font-size:18px">Since 2010</div>
-          <div style="font-size:13px;margin-top:4px">Serving the community</div>
-        </div>
-      </div>
+  <!-- VISION -->
+  <section id="vision" class="info-section">
+    <div class="info-card">
+      <img src="images/vision.jpg" alt="Vision Image" class="info-image">
+      <h2>Vision</h2>
+      <p>Develop the potential of each Individual and stretch it into the maximum.</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Vision & Mission -->
-  <section id="vision-mission" class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-      <h2 style="margin:0">Vision & Mission</h2>
-      <div style="color:var(--sub);font-weight:600">Empowering each child • Community focused</div>
-    </div>
-
-    <div class="cards">
-      <article class="card">
-        <div class="thumb"><img src="images/vision.jpg" alt="Vision image"></div>
-        <div class="body">
-          <h3>Vision</h3>
-          <p>Develop the potential of each Individual and stretch it into the maximum.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb"><img src="images/mission.jpg" alt="Mission image"></div>
-        <div class="body">
-          <h3>Mission</h3>
-          <p>Together with the community to create social changes for the differently abled — make it work.</p>
-        </div>
-      </article>
+  <!-- MISSION -->
+  <section id="mission" class="info-section">
+    <div class="info-card">
+      <img src="images/mission.jpg" alt="Mission Image" class="info-image">
+      <h2>Mission</h2>
+      <p>Together with the community to create social changes for the differently abled make it work.</p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-      <h2 style="margin:0">About VATHSALYAM</h2>
-      <div style="color:var(--sub);font-weight:600">Founded 17 August 2010</div>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-img"><img src="images/about.jpg" alt="About image"></div>
-      <div class="about-text">
-        <p><strong>VATHSALYAM School</strong> is a special project of <strong>Sevabharathi</strong>, launched on <strong>17 August 2010</strong> at Padmanabhapuram Sevabharathi office with just <strong>two students</strong>. Since then, more than <strong>70 students</strong> have benefited from our programs.</p>
-        <p>Our school engages in diverse activities that promote progress in both rural and urban areas, fostering <em>cultural, economic, and social change</em> within the community.</p>
-        <p>Today, <strong>VATHSALYAM</strong> is located at <em>Krishnancoil Street, Keralapuram, Kanyakumari District</em>, serving <strong>35 students</strong> with 4 Special Educators, a Principal, a Coordinator, and 3 support staff members.</p>
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <img src="images/about.jpg" alt="About Vathsalyam" class="about-image">
+      <div>
+        <h2>About Us</h2>
+        <p>
+          Vathsalyam, School is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office, only with 2 students. But more than 70 students have benefitted from this.
+        </p>
+        <p>
+          It serves different types of activities to get progress in rural and urban areas with a lot of cultural, economical and social changes in the society.
+        </p>
+        <p>
+          And now our "VATHSALYAM" is located in Krishnancoil Street, Keralapuram, Kanyakumari District with 35 students, 4 Special Educators, Principal, Co-ordinator, along with 3 helpers.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-      <h2 style="margin:0">Our Services</h2>
-      <div style="color:var(--sub);font-weight:600">Therapies • Education • Community</div>
+</main><!-- SERVICES -->
+<section id="services" class="services-section">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Special Education</h3>
+      <p>Customized learning programs for differently abled children to help them reach their potential.</p>
     </div>
-
-    <div class="services-grid">
-      <div class="service">
-        <img src="images/service1.png" alt="Special Education icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22><rect rx=%2212%22 width=%2272%22 height=%2272%22 fill=%22%23fff4e6%22/><text x=%2236%22 y=%2244%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23f36b21%22 font-family=%22Inter,Arial%22>ED</text></svg>'">
-        <h4>Special Education</h4>
-        <p>Individualized learning programs for intellectual disabilities.</p>
-      </div>
-
-      <div class="service">
-        <img src="images/service2.png" alt="Therapy icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22><rect rx=%2212%22 width=%2272%22 height=%2272%22 fill=%22%23fff4e6%22/><text x=%2236%22 y=%2244%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23f36b21%22 font-family=%22Inter,Arial%22>TH</text></svg>'">
-        <h4>Therapy Sessions</h4>
-        <p>Speech, occupational & physical therapy tailored to needs.</p>
-      </div>
-
-      <div class="service">
-        <img src="images/service3.png" alt="Skills icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22><rect rx=%2212%22 width=%2272%22 height=%2272%22 fill=%22%23fff4e6%22/><text x=%2236%22 y=%2244%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23f36b21%22 font-family=%22Inter,Arial%22>SK</text></svg>'">
-        <h4>Skill Development</h4>
-        <p>Life skills & vocational training for independence.</p>
-      </div>
-
-      <div class="service">
-        <img src="images/service4.png" alt="Community icon" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22><rect rx=%2212%22 width=%2272%22 height=%2272%22 fill=%22%23fff4e6%22/><text x=%2236%22 y=%2244%22 font-size=%2216%22 text-anchor=%22middle%22 fill=%22%23f36b21%22 font-family=%22Inter,Arial%22>CM</text></svg>'">
-        <h4>Community Programs</h4>
-        <p>Inclusive events and awareness programs in the locality.</p>
-      </div>
+    <div class="service-card">
+      <h3>Therapy Sessions</h3>
+      <p>Speech, occupational, and physical therapy tailored to each student's needs.</p>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="wrap">
-    <div class="contact">
-      <h2 style="margin:0 0 8px">Contact Us</h2>
-      <p style="margin:6px 0">📍 Krishnancoil Street, Keralapuram, Kanyakumari District</p>
-      <p style="margin:6px 0">📞 <a href="tel:+919876543210">+91 98765 43210</a> &nbsp; | &nbsp; ✉ <a href="mailto:vathsalyamschool@example.com">vathsalyamschool@example.com</a></p>
-      <p style="margin:8px 0 0;color:rgba(255,255,255,0.9)">Working with the community to create meaningful change.</p>
+    <div class="service-card">
+      <h3>Community Outreach</h3>
+      <p>Workshops and awareness programs to build inclusive communities.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="wrap">
-      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
-        <div style="font-weight:700">VATHSALYAM</div>
-        <div style="color:var(--sub)">© 2025 VATHSALYAM. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:info@vathsalyam.org">info@vathsalyam.org</a></p>
+  <p>Phone: +91-XXXXXXXXXX</p>
+  <p>Address: Krishnancoil Street, Keralapuram, Kanyakumari District</p>
+</section>
 
-  <!-- small JS: smooth scroll -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const t = document.querySelector(a.getAttribute('href'));
-        if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
-      });
-    });
-  </script>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>&copy; 2025 VATHSALYAM. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
+
+
