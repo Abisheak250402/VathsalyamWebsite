@@ -1,325 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VATHSALYAM - Special School for Intellectual Children</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(to right, #ff9933, #ffffff, #138808); /* saffron-white-green */
-            display: flex;
-            align-items: center;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        header img {
-            height: 80px;
-            width: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 3px solid white;
-            background-color: white;
-        }
-
-        .header-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            line-height: 1.2; /* reduced gap between lines */
-        }
-
-        .school-name {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin: 0 0 5px 0; /* tighter spacing */
-            color: #222;
-        }
-
-        .tagline {
-            font-size: 1.6rem;
-            margin: 0 0 5px 0;
-            color: #444;
-        }
-
-        .project-tagline {
-            font-size: 1.2rem;
-            margin: 0;
-            color: #666;
-        }
-
-        /* Navigation */
-        nav {
-            margin-left: auto;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #222;
-            font-weight: bold;
-            padding: 8px 12px;
-            transition: background 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VATHSALYAM - Sevabharathi Special Project</title>
+  <style>
+    /* All CSS will be placed in Part 4 */
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="images/logo.jpg" alt="School Logo">
-    <div class="header-text">
-        <div class="school-name">VATHSALYAM</div>
-        <div class="tagline">Special School for Intellectual Children</div>
-        <div class="project-tagline">SevaBharathi's Special Project</div>
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Vathsalyam Logo">
     </div>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#services">Services</a></li>
-        </ul>
-    </nav>
+    <div class="header-text">
+      <h1 class="school-name">VATHSALYAM</h1>
+      <h2 class="tagline">Develop the potential of each Individual and stretch it to the maximum</h2>
+      <h3 class="subtagline">A Special Project of Sevabharathi</h3>
+    </div>
+  </div>
 </header>
 
-<!-- ==== HEADER END ==== -->
-<!-- ==== ABOUT US SECTION ==== -->
-<section id="about" style="padding: 50px 20px; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 300px;">
-    <h2 style="font-size: 2.5rem; color: #ff6600; margin-bottom: 20px;">About Us</h2>
-    <p style="font-size: 1.1rem; text-align: justify;">
-      Vathsalyam School is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office, 
-      only with 2 students. More than 70 students have benefited from this. It serves different types of activities to improve rural 
-      and urban areas with cultural, economical, and social changes in society.
-    </p>
-    <p style="font-size: 1.1rem; margin-top: 10px; text-align: justify;">
-      Currently, our "VATHSALYAM" is located in Krishnancoil Street, Keralapuram, Kanyakumari District with 35 students, 4 Special 
-      Educators, a Principal, Coordinator, along with 3 helpers.
-    </p>
-  </div>
-  <div style="flex: 1; min-width: 250px; display: flex; justify-content: center;">
-    <img src="images/about.avif" alt="About Us" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-  </div>
-</section>
+<nav class="navbar">
+  <ul>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#vision-mission">Vision & Mission</a></li>
+    <li><a href="#services">Our Services</a></li>
+    <li><a href="#events">Events & Programs</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- ==== VISION & MISSION ==== -->
-<section id="vision-mission" style="padding: 50px 20px; background: #fff7e6;">
-  <h2 style="text-align: center; font-size: 2.5rem; color: #ff6600; margin-bottom: 40px;">Vision & Mission</h2>
-  
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-    <div class="card" style="flex: 1; min-width: 280px; max-width: 500px; background: white; padding: 30px; border-radius: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-      <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: #ff6600;">Our Vision</h3>
-      <p>To empower differently abled children with education, training, and cultural development so they can lead fulfilling lives in society.</p>
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        Vathsalyam School is a special project of Sevabharathi, which was started on 17/08/2010 at Padmanapaburam Sevabharathi office with only 2 students.
+        More than 70 students have benefitted from this initiative. It serves different types of activities to bring progress in rural and urban areas,
+        bringing cultural, economical, and social changes in society.
+      </p>
+      <p>
+        Now, our "VATHSALYAM" is located at Krishnancoil Street, Keralapuram, Kanyakumari District with 35 students, 4 Special Educators, Principal, Co-ordinator, and 3 helpers.
+      </p>
     </div>
-    
-    <div class="card" style="flex: 1; min-width: 280px; max-width: 500px; background: white; padding: 30px; border-radius: 15px; text-align: center; transition: transform 0.3s, box-shadow 0.3s;">
-      <h3 style="font-size: 1.8rem; margin-bottom: 15px; color: #ff6600;">Our Mission</h3>
-      <p>To provide high-quality education, therapies, and skill development programs tailored to the unique needs of each student.</p>
+    <div class="about-image">
+      <img src="images/about.jpg" alt="About Vathsalyam">
     </div>
   </div>
 </section>
 
-<style>
-/* ==== HOVER EFFECT FOR CARDS ==== */
-#vision-mission .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-</style>
-<!-- ==== SERVICES SECTION ==== -->
-<section id="services" style="padding: 50px 20px; background: #fff;">
-  <h2 style="text-align: center; font-size: 2.5rem; color: #ff6600; margin-bottom: 40px;">Our Services</h2>
-
-  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-    <!-- SERVICE 1 -->
-    <div class="service-card slide-left">
-      <img src="images/service1.jpg" alt="Training for Autism" />
-      <h3>Training for Autism Students</h3>
-      <p>We are providing training for Autism students & some students after necessary rehabilitation and training have gone back to mainstream schools.</p>
+<section id="vision-mission" class="vision-mission-section">
+  <div class="vm-container">
+    <div class="vm-box">
+      <h3>Vision</h3>
+      <p>Develop the potential of each Individual and stretch it to the maximum.</p>
     </div>
-
-    <!-- SERVICE 2 -->
-    <div class="service-card slide-right">
-      <img src="images/service2.jpeg" alt="Vocational Training" />
-      <h3>Vocational Training</h3>
-      <p>Vocational Training Centre are designed to enable a differently abled person to secure and retain suitable employment.</p>
+    <div class="vm-box">
+      <h3>Mission</h3>
+      <p>Together with the community to create social changes for the differently abled and make it work.</p>
     </div>
-
-    <!-- SERVICE 3 -->
-    <div class="service-card slide-left">
-      <img src="images/service3.jpg" alt="Yoga" />
-      <h3>Yoga</h3>
-      <p>Children with special needs have various physical and mental disabilities which affect their mental attitude.</p>
-    </div>
-
-    <!-- SERVICE 4 -->
-    <div class="service-card slide-right">
-      <img src="images/service4.jpeg" alt="Occupational Therapy" />
-      <h3>Occupational Therapy</h3>
-      <p>Helps students increase functional independence in daily life; assessments are conducted by occupational therapists.</p>
-    </div>
-
-    <!-- SERVICE 5 -->
-    <div class="service-card slide-left">
-      <img src="service5.jpeg" alt="Physiotherapy" />
-      <h3>Physiotherapy</h3>
-      <p>Reduces physical deformities and increases mobility, making children more active and confident.</p>
-    </div>
-
-    <!-- SERVICE 6 -->
-    <div class="service-card slide-right">
-      <img src="images/service6.jpeg" alt="Speech Therapy" />
-      <h3>Speech Therapy</h3>
-      <p>Supports cognitive and social development in children with developmental disabilities.</p>
-    </div>
-
-    <!-- SERVICE 7 -->
-    <div class="service-card slide-left">
-      <img src="images/service7.jpg" alt="Special Education" />
-      <h3>Special Education</h3>
-      <p>Training for body movement, hygiene, language, reading, writing, social skills, and more by qualified teachers.</p>
-    </div>
-
-    <!-- SERVICE 8 -->
-    <div class="service-card slide-right">
-      <img src="images/service8.jpg" alt="Medical Checkup" />
-      <h3>Medical Checkup</h3>
-      <p>Bi-annual checkups with monthly medicine supply; each student is assessed for abilities and development.</p>
-    </div>
-
-    <!-- SERVICE 9 -->
-    <div class="service-card slide-left">
-      <img src="images/service9.jpg" alt="Healthy Foods" />
-      <h3>Healthy Foods</h3>
-      <p>Nutritious foods like sprouts, nuts, fruits, and vegetables are provided to boost immunity and health.</p>
-    </div>
-
   </div>
 </section>
 
-<style>
-/* ==== SERVICES STYLING ==== */
-.service-card {
-  flex: 1 1 calc(50% - 20px);
-  min-width: 280px;
-  max-width: 500px;
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
+<section id="services" class="services-section">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <!-- Service items here (already in our previous code) -->
+  </div>
+</section>
+<section id="events" class="events-section">
+  <h2>Events & Programs</h2>
+  <p>
+    Each and Every function such as Yoga, Independence Day, Onam, Krishna Jayanti, Diwali, Children's Day, Differently Abled Day, Pongal
+    are celebrated with Sevabharathi's Responsible persons, Sponsors, Parents, and local people at Vathsalyam School.
+  </p>
+  <p>
+    Independence Day pictures will be available here on <strong>18.08.2025</strong>.
+  </p>
+</section>
 
-.service-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+<section id="gallery" class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <!-- Onam -->
+    <div class="gallery-item">
+      <img src="images/gallery/onam1.jpg" alt="Onam Celebration 1">
+      <div class="caption">Onam Celebration</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/gallery/onam2.jpg" alt="Onam Celebration 2">
+      <div class="caption">Onam Celebration</div>
+    </div>
 
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
+    <!-- School Day -->
+    <div class="gallery-item">
+      <img src="images/gallery/schoolday1.jpg" alt="School Day Celebration">
+      <div class="caption">School Day Celebration</div>
+    </div>
 
-/* ==== ANIMATION ==== */
-@keyframes slideFromLeft {
-  0% { transform: translateX(-100px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
+    <!-- Independence Day Placeholder -->
+    <div class="gallery-item coming-soon">
+      <div class="coming-soon-text">
+        Independence Day Pictures will be available on 18.08.2025
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Events & Programs Section -->
+<section id="events" style="padding: 60px 20px; background: #f9f9f9;">
+    <div style="max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; font-size: 2.5em; color: #ff6600; margin-bottom: 20px;">
+            Events & Programs
+        </h2>
+        <p style="text-align: center; font-size: 1.1em; max-width: 900px; margin: auto; line-height: 1.6;">
+            Each and Every function such as <strong>Yoga, Independence Day, Onam, Krishna Jayanti, Diwali, Children's Day, Differently Abled Day, Pongal</strong> are celebrated with 
+            Sevabharathi's responsible persons, sponsors, parents, and the community at Vathsalyam School.  
+            You can explore our special moments in the gallery below. <br><br>
+            <em>Note: Independence Day pictures will be available here on 18.08.2025.</em>
+        </p>
+    </div>
+</section>
 
-@keyframes slideFromRight {
-  0% { transform: translateX(100px); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
-}
+<!-- Gallery Section -->
+<section id="gallery" style="padding: 60px 20px; background: white;">
+    <div style="max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; font-size: 2.5em; color: #ff6600; margin-bottom: 40px;">
+            Gallery
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <!-- Onam 1 -->
+            <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="images/gallery/onam1.jpg" alt="Onam Celebration" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 10px; text-align: center; font-weight: bold;">Onam Celebration</div>
+            </div>
 
-.slide-left { animation: slideFromLeft 1s ease-out; }
-.slide-right { animation: slideFromRight 1s ease-out; }
-</style>
-<!-- ==== FOOTER ==== -->
-<footer style="background: linear-gradient(to right, #ff9933, #ff6600); color: white; padding: 20px; text-align: center;">
-  <p>&copy; 2025 Your Organization Name. All Rights Reserved.</p>
+            <!-- Onam 2 -->
+            <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="images/gallery/onam2.jpg" alt="Onam Celebration" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 10px; text-align: center; font-weight: bold;">Onam Celebration</div>
+            </div>
+
+            <!-- School Day -->
+            <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <img src="images/gallery/schoolday1.jpg" alt="School Day Function" style="width: 100%; height: auto; display: block;">
+                <div style="padding: 10px; text-align: center; font-weight: bold;">School Day Function</div>
+            </div>
+
+            <!-- Independence Day Placeholder -->
+            <div style="border-radius: 10px; overflow: hidden; background: #eee; display: flex; align-items: center; justify-content: center; height: 250px; text-align: center; font-weight: bold; padding: 20px;">
+                Independence Day pictures will be available here on 18.08.2025.
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer style="background: linear-gradient(to right, #ff9933, #ff6600); color: white; padding: 40px 20px 20px; text-align: center;">
+    <div style="max-width: 1200px; margin: auto;">
+        <h3 style="margin-bottom: 10px;">Vathsalyam Special School</h3>
+        <p>Empowering differently-abled children through education, care, and skill development.</p>
+        <div style="margin: 20px 0;">
+            <a href="#home" style="color: white; margin: 0 10px; text-decoration: none;">Home</a>
+            <a href="#about" style="color: white; margin: 0 10px; text-decoration: none;">About Us</a>
+            <a href="#services" style="color: white; margin: 0 10px; text-decoration: none;">Services</a>
+            <a href="#events" style="color: white; margin: 0 10px; text-decoration: none;">Events</a>
+            <a href="#gallery" style="color: white; margin: 0 10px; text-decoration: none;">Gallery</a>
+            <a href="#contact" style="color: white; margin: 0 10px; text-decoration: none;">Contact</a>
+        </div>
+        <p style="font-size: 0.9em; margin-top: 20px;">&copy; 2025 Vathsalyam Special School. All rights reserved.</p>
+    </div>
 </footer>
 
-<!-- ==== SCROLL TO TOP BUTTON ==== -->
-<button id="scrollTopBtn" title="Go to top">&#8679;</button>
+<!-- Back to Top Button -->
+<button onclick="scrollToTop()" id="backToTopBtn" title="Go to top"
+    style="display: none; position: fixed; bottom: 30px; right: 30px; z-index: 99; border: none; outline: none; background-color: #ff6600; color: white; cursor: pointer; padding: 12px 16px; border-radius: 50%; font-size: 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    ↑
+</button>
 
-<style>
-#scrollTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 1000;
-  font-size: 20px;
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 12px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
-}
-#scrollTopBtn:hover {
-  background: #ff3300;
-}
-</style>
-
-<!-- ==== TOGGLE & SCROLL SCRIPT ==== -->
+<!-- JavaScript for Toggle Menu & Back to Top -->
 <script>
-/* Toggle Mobile Menu */
-function toggleMenu() {
-  const navMenu = document.querySelector("nav ul");
-  navMenu.classList.toggle("active");
-}
+    // Mobile menu toggle
+    function toggleMenu() {
+        var menu = document.getElementById("navbar-menu");
+        menu.classList.toggle("active");
+    }
 
-/* Scroll to Top */
-let scrollBtn = document.getElementById("scrollTopBtn");
+    // Back to top button
+    let backToTopBtn = document.getElementById("backToTopBtn");
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-};
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
 
-scrollBtn.onclick = function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 </script>
-
 </body>
 </html>
-
-
-
