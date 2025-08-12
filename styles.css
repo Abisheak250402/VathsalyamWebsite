@@ -1,1 +1,136 @@
+/* GENERAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #ff9933, #ffffff);
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.site-logo {
+  height: 70px;
+  width: auto;
+  margin-right: 15px;
+}
+.school-title h1 {
+  font-size: 2rem;
+  color: #222;
+}
+.tagline {
+  font-size: 1rem;
+  color: #444;
+}
+.sub-tagline {
+  font-size: 0.9rem;
+  color: #666;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #ff6600;
+}
+
+/* MAIN SECTIONS */
+.info-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.info-card {
+  max-width: 600px;
+  margin: auto;
+}
+.info-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 20px;
+  align-items: center;
+}
+.about-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+}
+.about-content div {
+  flex: 2;
+}
+
+/* SERVICES */
+.services-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+.services-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: white;
+  padding: 20px;
+  flex: 1 1 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+}
 
