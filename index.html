@@ -4,135 +4,87 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>VATHSALYAM — Special School for Intellectual Children</title>
-  <meta name="description" content="VATHSALYAM - SevaBharathi special project. Education, therapy & community programs for differently-abled children.">
+  <meta name="description" content="VATHSALYAM - A SevaBharathi special project. Education, therapy & community programs for differently-abled children.">
 
   <style>
-  /* =========================
-     VARIABLES & RESET
-     ========================= */
+  /* ========= VARIABLES & RESET ========= */
   :root{
-    --saffron-1: #ff9d3b;
-    --saffron-2: #f36b21;
-    --muted: #f6f8fb;
-    --card: #ffffff;
-    --text: #0f1724;
-    --sub: #53606a;
-    --accent: #0b5a3b;
-    --glass: rgba(255,255,255,0.6);
-    --radius: 12px;
-    --shadow: 0 10px 30px rgba(15,23,36,0.06);
-    --maxw: 1200px;
+    --saffron-1:#ff9d3b; --saffron-2:#f36b21;
+    --muted:#f6f8fb; --card:#ffffff;
+    --text:#0f1724; --sub:#52606a; --accent:#0b5a3b;
+    --radius:12px; --shadow: 0 10px 30px rgba(15,23,36,0.06);
+    --maxw:1200px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html,body{height:100%}
   body{
-    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: linear-gradient(180deg,var(--muted), #fff 40%);
-    color:var(--text);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.5;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background:linear-gradient(180deg,var(--muted),#fff 35%);
+    color:var(--text); -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
-  /* =========================
-     HEADER
-     ========================= */
+  /* ========= HEADER (kept as you liked) ========= */
   header.site-header{
     width:100%;
     background: linear-gradient(90deg,var(--saffron-1) 0%, #ffffff 50%, #138808 100%);
-    position: sticky;
-    top:0;
-    z-index:1100;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    position:sticky; top:0; z-index:1200;
+    box-shadow:0 6px 20px rgba(0,0,0,0.06);
   }
   .site-header .inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:18px;
-    padding:14px 20px;
-    max-width:var(--maxw);
-    margin:0 auto;
+    max-width:var(--maxw); margin:0 auto; padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
   }
-
   .brand-left{display:flex;align-items:center;gap:12px}
-  .logo-oval{
-    width:86px;height:86px;border-radius:50%;overflow:hidden;background:#fff;padding:6px;box-shadow:0 8px 26px rgba(0,0,0,0.12);
-    display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  }
+  .logo-oval{width:86px;height:86px;border-radius:50%;overflow:hidden;background:#fff;padding:6px;box-shadow:0 8px 26px rgba(0,0,0,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
   .logo-oval img{width:100%;height:100%;object-fit:contain;border-radius:50%}
-
-  .brand-text{line-height:1}
-  .brand-text .title{font-family: 'Merriweather', serif; font-weight:800; color:#0b1220; font-size:1.55rem; letter-spacing:0.4px}
+  .brand-text .title{font-family:'Merriweather',serif;font-weight:800;color:#0b1220;font-size:1.55rem;letter-spacing:0.4px}
   .brand-text .tag{font-size:0.95rem;color:rgba(0,0,0,0.9);margin-top:4px;font-weight:600}
   .brand-text .sub{font-size:0.9rem;color:rgba(0,0,0,0.7);margin-top:2px;font-style:italic}
 
-  /* NAV - transparent pill buttons style */
+  /* NAV - transparent pill buttons */
   nav.site-nav{display:flex;gap:10px;align-items:center}
   nav.site-nav a{
     padding:8px 12px;border-radius:999px;font-weight:700;font-size:0.95rem;color:rgba(0,0,0,0.85);
     background: rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.12);
-    transition: all .22s ease;
-    backdrop-filter: blur(4px);
+    transition: all .22s ease;backdrop-filter: blur(4px)
   }
   nav.site-nav a:hover{ transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); color:var(--saffron-2); background: rgba(255,255,255,0.18) }
-
-  /* CTA in nav */
   .nav-cta{background:transparent;color:rgba(0,0,0,0.9);border:1px solid rgba(0,0,0,0.06);padding:8px 14px;border-radius:999px}
 
-  /* hamburger for mobile */
+  /* hamburger */
   .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
   .hamburger span{width:24px;height:3px;background:rgba(0,0,0,0.85);border-radius:3px}
 
   @media (max-width:900px){
-    .brand-text .title{font-size:1.2rem}
     nav.site-nav{display:none}
     .hamburger{display:flex}
-    .site-header .inner{padding:12px}
   }
 
-  /* mobile nav dropdown */
-  .mobile-nav{
-    display:none;
-    position: absolute;
-    right:18px;
-    top:100%;
-    background:white;
-    padding:12px;
-    border-radius:10px;
-    box-shadow:0 12px 40px rgba(0,0,0,0.12);
-    z-index:1200;
-    min-width:200px;
-    flex-direction:column;
-    gap:8px;
-  }
+  /* mobile menu card */
+  .mobile-nav{display:none;position:absolute;right:18px;top:100%;background:white;padding:12px;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,0.12);z-index:1200;min-width:220px;flex-direction:column;gap:8px}
   .mobile-nav.show{display:flex}
-
   .mobile-nav a{color:var(--text);padding:8px;border-radius:8px}
   .mobile-nav a:hover{background:var(--muted)}
 
-  /* =========================
-     HERO spacer (small) to separate header from content
-     ========================= */
-  .hero-spacer{height:8px;background:transparent}
+  /* small spacer */
+  .hero-spacer{height:6px;background:transparent}
 
-  /* =========================
-     SECTIONS
-     ========================= */
+  /* ====== SECTIONS ====== */
   section{padding:48px 0}
-  .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
   .section-title{font-size:1.9rem;color:var(--saffron-2);font-weight:800}
   .section-sub{color:var(--sub);font-weight:600}
 
   /* ABOUT */
   .about-card{background:var(--card);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
-  .about-grid{display:grid;grid-template-columns:1fr 440px;gap:20px;align-items:center}
+  .about-grid{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center}
   .about-img img{width:100%;height:320px;object-fit:cover;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
   @media(max-width:880px){ .about-grid{grid-template-columns:1fr} .about-img img{height:260px} }
 
-  /* VISION / MISSION floating */
+  /* VISION / MISSION */
   .vm-wrap{display:flex;gap:22px;flex-wrap:wrap;justify-content:center}
   .vm-card{background:linear-gradient(180deg,#fff,#fff);border-radius:12px;padding:26px;width:100%;max-width:520px;text-align:center;box-shadow:var(--shadow);transition:transform .35s,box-shadow .35s}
   .vm-card:hover{transform:translateY(-10px);box-shadow:0 22px 50px rgba(15,23,36,0.12)}
@@ -156,42 +108,58 @@
   .service-body h4{margin:0 0 8px;color:var(--accent)}
   .service-body p{margin:0;color:var(--sub);line-height:1.6}
 
-  /* entry offsets */
   .anim-left{transform:translateX(-90px) rotate(-4deg) scale(.98)}
   .anim-right{transform:translateX(90px) rotate(4deg) scale(.98)}
-
-  /* hover glow */
   .service-card:hover{outline:4px solid rgba(243,107,33,0.06)}
 
-  /* EVENTS */
-  .events-card{background:linear-gradient(180deg,#fff,#fff);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
-  .events-card p{color:var(--sub)}
+  /* EVENTS flip cards */
+  .events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .flip-card{perspective:1200px}
+  .flip-inner{position:relative;width:100%;height:320px;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.9,.2,1)}
+  .flip-card:hover .flip-inner{transform:rotateY(180deg)}
+  .flip-front,.flip-back{position:absolute;inset:0;border-radius:12px;overflow:hidden;backface-visibility:hidden;box-shadow:var(--shadow)}
+  .flip-front img{width:100%;height:100%;object-fit:cover}
+  .flip-back{background:#fff;transform:rotateY(180deg);padding:18px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+  .flip-back h4{margin-bottom:8px;color:var(--accent)}
+  .flip-back p{color:var(--sub);line-height:1.5}
 
   /* GALLERY */
   .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-  .gallery-item{position:relative;overflow:hidden;border-radius:10px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+  .gallery-item{position:relative;overflow:hidden;border-radius:10px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,0.06);cursor:pointer}
   .gallery-item img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .35s}
   .gallery-item:hover img{transform:scale(1.06)}
   .gallery-caption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,0.45);color:#fff;padding:6px 10px;border-radius:6px;font-size:0.95rem}
-
-  /* Coming soon tile */
   .gallery-coming{display:flex;align-items:center;justify-content:center;height:200px;background:linear-gradient(180deg,#fff6ea,#fff1df);color:var(--sub);font-weight:700;padding:12px;text-align:center;border-radius:10px}
 
-  /* LIGHTBOX */
+  /* LIGHTBOX with arrows */
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:flex;align-items:center;justify-content:center;z-index:2200;opacity:0;pointer-events:none;transition:opacity .2s}
   .lightbox.show{opacity:1;pointer-events:auto}
-  .lightbox img{max-width:92%;max-height:84%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
-  .lightbox .meta{color:#fff;margin-top:12px;text-align:center}
+  .lightbox .frame{position:relative;max-width:92%;max-height:86%}
+  .lightbox img{max-width:100%;max-height:84vh;border-radius:10px;display:block}
+  .lb-meta{color:#fff;text-align:center;margin-top:10px}
+  .lb-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:28px;color:#fff;background:rgba(0,0,0,0.35);border-radius:50%;width:46px;height:46px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .lb-left{left:-60px} .lb-right{right:-60px}
+  @media(max-width:720px){ .lb-left{left:10px} .lb-right{right:10px} .lb-arrow{width:40px;height:40px} }
+
+  /* ADMISSIONS form */
+  .admissions-card{background:var(--card);border-radius:12px;padding:22px;box-shadow:var(--shadow);max-width:760px;margin:0 auto}
+  .form-row{display:flex;gap:12px;flex-wrap:wrap}
+  .form-row input, .form-row select{flex:1 1 200px;padding:12px;border-radius:8px;border:1px solid #e6e9ef}
+  .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--saffron-1),var(--saffron-2));color:#fff;font-weight:700;border:none;cursor:pointer}
+  .ack{margin-top:12px;padding:12px;border-radius:8px;background:#f0fff4;color:#0b6b3d;border:1px solid rgba(11,106,59,0.12);display:none}
+
+  /* MANAGEMENT / STAFF */
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .member{background:var(--card);padding:18px;border-radius:12px;text-align:center;box-shadow:var(--shadow)}
+  .member img{width:110px;height:110px;border-radius:50%;object-fit:cover;margin:0 auto 10px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+  .member h4{margin:6px 0;color:var(--accent)}
+  .member p{color:var(--sub);font-size:0.95rem}
 
   /* BACK TO TOP */
   #toTop{position:fixed;right:20px;bottom:22px;background:linear-gradient(45deg,var(--saffron-1),var(--saffron-2));border:none;color:white;padding:12px 14px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.18);cursor:pointer;display:none;z-index:2000}
 
   /* FOOTER */
   footer.site-footer{padding:20px 0;text-align:center;background:linear-gradient(90deg,var(--saffron-1),var(--saffron-2));color:#fff;margin-top:28px}
-
-  /* small helpers */
-  .muted{color:var(--sub)}
-  .center{text-align:center}
 
   </style>
 </head>
@@ -202,7 +170,7 @@
     <div class="inner">
       <div class="brand-left">
         <div class="logo-oval" aria-hidden="true">
-          <img src="images/logo.jpg" alt="Vathsalyam Logo">
+          <img src="images/logo.jpg" alt="Vathsalyam Logo" loading="lazy">
         </div>
         <div class="brand-text">
           <div class="title">VATHSALYAM</div>
@@ -219,16 +187,17 @@
         <a href="#services">Services</a>
         <a href="#events">Events</a>
         <a href="#gallery">Gallery</a>
+        <a href="#management">Management</a>
         <a href="#admissions">Admissions</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
 
-      <!-- hamburger -->
+      <!-- hamburger (mobile) -->
       <div class="hamburger" id="hamburgerBtn" aria-label="Open menu" role="button" tabindex="0">
         <span></span><span></span><span></span>
       </div>
 
-      <!-- mobile menu (hidden on desktop) -->
+      <!-- mobile menu -->
       <div class="mobile-nav" id="mobileNav" aria-hidden="true">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -236,47 +205,54 @@
         <a href="#services">Services</a>
         <a href="#events">Events</a>
         <a href="#gallery">Gallery</a>
+        <a href="#management">Management</a>
         <a href="#admissions">Admissions</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <div class="hero-spacer"></div>
+  <div class="hero-spacer" aria-hidden="true"></div>
 
-  <!-- MAIN -->
   <main>
 
+    <!-- HOME (anchor) -->
+    <section id="home" class="wrap" aria-label="Home" style="padding-top:18px">
+      <!-- small hero — you can add a slider or hero image later -->
+    </section>
+
     <!-- ABOUT -->
-    <section id="about" class="wrap">
+    <section id="about" class="wrap" aria-labelledby="about-heading">
       <div class="about-card">
         <div class="about-grid">
           <div>
-            <h2 class="section-title">About VATHSALYAM</h2>
+            <h2 id="about-heading" class="section-title">About VATHSALYAM</h2>
             <p class="muted">Vathsalyam School is a special project of Sevabharathi, launched on 17 Aug 2010 at Padmanabhapuram Sevabharathi office with just two students. Over the years more than 70 students have benefited. We provide education, therapies, vocational training and community programs across rural and urban areas to bring social, cultural and economic change.</p>
             <p style="margin-top:10px" class="muted">Today, VATHSALYAM is located at Krishnancoil Street, Keralapuram, Kanyakumari District, serving 35 students with 4 special educators, a principal, a coordinator and 3 helpers.</p>
           </div>
           <div class="about-img">
-            <img src="images/about.jpg" alt="Vathsalyam School building or students">
+            <img src="images/about.jpg" alt="Vathsalyam School building or students" loading="lazy">
           </div>
         </div>
       </div>
     </section>
 
     <!-- VISION & MISSION -->
-    <section id="vision-mission" class="wrap">
+    <section id="vision-mission" class="wrap" aria-labelledby="vision-heading">
       <div class="section-head">
-        <div class="section-title">Vision & Mission</div>
-        <div class="section-sub muted">Developing potential • Community-centered</div>
+        <div>
+          <div id="vision-heading" class="section-title">Vision & Mission</div>
+          <div class="muted section-sub">Developing potential • Community-centered</div>
+        </div>
       </div>
 
       <div class="vm-wrap">
-        <div class="vm-card vm-animate">
+        <div class="vm-card vm-animate" aria-labelledby="vision-heading">
           <h3>Vision</h3>
           <p>Develop the potential of each individual and stretch it into the maximum.</p>
         </div>
 
-        <div class="vm-card vm-animate">
+        <div class="vm-card vm-animate" aria-labelledby="vision-heading">
           <h3>Mission</h3>
           <p>Together with the community to create social changes for the differently abled — make it work.</p>
         </div>
@@ -284,17 +260,19 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="wrap">
+    <section id="services" class="wrap" aria-labelledby="services-heading">
       <div class="section-head">
-        <div class="section-title">Our Services</div>
-        <div class="section-sub muted">Therapies • Education • Community</div>
+        <div>
+          <div id="services-heading" class="section-title">Our Services</div>
+          <div class="section-sub muted">Therapies • Education • Community</div>
+        </div>
       </div>
 
-      <div class="services-grid" id="servicesGrid">
+      <div class="services-grid" id="servicesGrid" aria-live="polite">
 
         <!-- 1 -->
         <article class="service-card anim-left" data-anim="left">
-          <div class="service-thumb"><img src="images/service1.jpg" alt="Training for Autism Students"></div>
+          <div class="service-thumb"><img src="images/service1.jpg" alt="Training for Autism Students" loading="lazy"></div>
           <div class="service-body">
             <h4>TRAINING for AUTISM STUDENTS</h4>
             <p>We provide training for Autism students; some students return to mainstream schools after rehabilitation and training.</p>
@@ -303,7 +281,7 @@
 
         <!-- 2 -->
         <article class="service-card anim-right" data-anim="right">
-          <div class="service-thumb"><img src="images/service2.jpg" alt="Vocational Training"></div>
+          <div class="service-thumb"><img src="images/service2.jpg" alt="Vocational Training" loading="lazy"></div>
           <div class="service-body">
             <h4>VOCATIONAL TRAINING</h4>
             <p>Vocational training enables differently-abled persons to secure and retain suitable employment and independence.</p>
@@ -312,7 +290,7 @@
 
         <!-- 3 -->
         <article class="service-card anim-left" data-anim="left">
-          <div class="service-thumb"><img src="images/service3.jpg" alt="Yoga"></div>
+          <div class="service-thumb"><img src="images/service3.jpg" alt="Yoga" loading="lazy"></div>
           <div class="service-body">
             <h4>YOGA</h4>
             <p>Yoga helps children with special needs improve physical balance, attention and mental wellbeing.</p>
@@ -321,7 +299,7 @@
 
         <!-- 4 -->
         <article class="service-card anim-right" data-anim="right">
-          <div class="service-thumb"><img src="images/service4.jpg" alt="Occupational Therapy"></div>
+          <div class="service-thumb"><img src="images/service4.jpg" alt="Occupational Therapy" loading="lazy"></div>
           <div class="service-body">
             <h4>OCCUPATIONAL THERAPY</h4>
             <p>Occupational therapy increases students' functional independence through targeted activities and assessments.</p>
@@ -330,7 +308,7 @@
 
         <!-- 5 -->
         <article class="service-card anim-left" data-anim="left">
-          <div class="service-thumb"><img src="images/service5.jpg" alt="Physio Therapy"></div>
+          <div class="service-thumb"><img src="images/service5.jpg" alt="Physio Therapy" loading="lazy"></div>
           <div class="service-body">
             <h4>PHYSIO THERAPY</h4>
             <p>Aims to reduce physical deformities and improve mobility and comfort for daily activities.</p>
@@ -339,7 +317,7 @@
 
         <!-- 6 -->
         <article class="service-card anim-right" data-anim="right">
-          <div class="service-thumb"><img src="images/service6.jpg" alt="Speech Therapy"></div>
+          <div class="service-thumb"><img src="images/service6.jpg" alt="Speech Therapy" loading="lazy"></div>
           <div class="service-body">
             <h4>SPEECH THERAPY</h4>
             <p>Speech therapy supports language, social skills and cognitive development for children with developmental delays.</p>
@@ -348,7 +326,7 @@
 
         <!-- 7 -->
         <article class="service-card anim-left" data-anim="left">
-          <div class="service-thumb"><img src="images/service7.jpg" alt="Special Education"></div>
+          <div class="service-thumb"><img src="images/service7.jpg" alt="Special Education" loading="lazy"></div>
           <div class="service-body">
             <h4>SPECIAL EDUCATION</h4>
             <p>Comprehensive special education including life skills, basics of reading, writing, math and social communication by trained teachers.</p>
@@ -357,7 +335,7 @@
 
         <!-- 8 -->
         <article class="service-card anim-right" data-anim="right">
-          <div class="service-thumb"><img src="images/service8.jpg" alt="Medical Checkup"></div>
+          <div class="service-thumb"><img src="images/service8.jpg" alt="Medical Checkup" loading="lazy"></div>
           <div class="service-body">
             <h4>MEDICAL CHECKUP</h4>
             <p>Bi-annual health screenings and regular medicine supply to monitor and maintain student health.</p>
@@ -366,7 +344,7 @@
 
         <!-- 9 -->
         <article class="service-card anim-left" data-anim="left">
-          <div class="service-thumb"><img src="images/service9.jpg" alt="Healthy Foods"></div>
+          <div class="service-thumb"><img src="images/service9.jpg" alt="Healthy Foods" loading="lazy"></div>
           <div class="service-body">
             <h4>HEALTHY FOODS</h4>
             <p>Nutritious meals — sprouts, fruits, nuts and vegetables — prepared to boost immunity and wellbeing.</p>
@@ -376,32 +354,135 @@
       </div>
     </section>
 
-    <!-- EVENTS & PROGRAMS -->
-    <section id="events" class="wrap">
-      <div class="events-card">
-        <h2 class="section-title">Events & Programs</h2>
-        <p class="muted">Each function such as Yoga, Independence Day, Onam, Krishna Jayanti, Diwali, Children's Day, Differently Abled Day and Pongal are celebrated with Sevabharathi's responsible persons, sponsors, parents and the local community at Vathsalyam School.</p>
-        <p style="margin-top:10px" class="muted"><strong>Note:</strong> Independence Day pictures will be available here on <strong>18.08.2025</strong>.</p>
+    <!-- EVENTS (flip cards) -->
+    <section id="events" class="wrap" aria-labelledby="events-heading">
+      <div class="section-head">
+        <div>
+          <div id="events-heading" class="section-title">Events & Programs</div>
+          <div class="section-sub muted">Celebrations, cultural programs & community events</div>
+        </div>
+      </div>
+
+      <div class="events-grid">
+        <!-- Event 1 -->
+        <div class="flip-card" role="button" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="images/gallery/onam1.jpg" alt="Onam"></div>
+            <div class="flip-back">
+              <h4>Onam Celebration</h4>
+              <p>Festival celebrating harvest and culture with students, parents and community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="flip-card" role="button" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front"><img src="images/gallery/schoolday1.jpg" alt="School Day"></div>
+            <div class="flip-back">
+              <h4>School Day</h4>
+              <p>Our students display projects, performances and community involvement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 (Independence placeholder) -->
+        <div class="flip-card" role="button" tabindex="0">
+          <div class="flip-inner">
+            <div class="flip-front" style="background:linear-gradient(180deg,#fff6ea,#fff1df);display:flex;align-items:center;justify-content:center">
+              <div style="padding:12px;text-align:center;color:var(--sub);font-weight:700">Independence Day<br>Photos on 18.08.2025</div>
+            </div>
+            <div class="flip-back">
+              <h4>Independence Day (Coming)</h4>
+              <p>Celebrating our nation's spirit — photos will be uploaded on 18.08.2025.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- GALLERY -->
-    <section id="gallery" class="wrap">
+    <section id="gallery" class="wrap" aria-labelledby="gallery-heading">
       <div style="margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <div>
-          <div class="section-title">Gallery / Photos</div>
-          <div class="muted">Click to enlarge. Add more images to <code>images/gallery/</code>.</div>
+          <div id="gallery-heading" class="section-title">Gallery / Photos</div>
+          <div class="muted">Click to enlarge. Add images to <code>images/gallery/</code> to update.</div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button onclick="filterGallery('all')" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:#fff">All</button>
-          <button onclick="filterGallery('onam')" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:#fff">Onam</button>
-          <button onclick="filterGallery('schoolday')" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:#fff">School Day</button>
-          <button onclick="filterGallery('independence')" style="padding:8px 12px;border-radius:999px;border:1px solid rgba(0,0,0,0.06);background:#fff">Independence Day</button>
+          <button onclick="filterGallery('all')" class="btn">All</button>
+          <button onclick="filterGallery('onam')" class="btn" style="background:#fff;color:var(--text)">Onam</button>
+          <button onclick="filterGallery('schoolday')" class="btn" style="background:#fff;color:var(--text)">School Day</button>
+          <button onclick="filterGallery('independence')" class="btn" style="background:#fff;color:var(--text)">Independence</button>
         </div>
       </div>
 
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- items inserted dynamically by JS -->
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+        <!-- JS will render gallery items -->
+      </div>
+    </section>
+
+    <!-- ADMISSIONS -->
+    <section id="admissions" class="wrap" aria-labelledby="admissions-heading">
+      <div class="admissions-card">
+        <h2 id="admissions-heading" class="section-title center">Admissions</h2>
+        <p class="muted center">Fill the form and our team will contact you shortly.</p>
+
+        <form id="admissionsForm" style="margin-top:14px">
+          <div class="form-row" style="margin-bottom:10px">
+            <input id="nameInput" type="text" name="name" placeholder="Full name" required>
+            <input id="phoneInput" type="tel" name="phone" placeholder="Phone number" required pattern="[0-9+ ]{6,18}">
+            <input id="locInput" type="text" name="location" placeholder="Location (village/city)" required>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button type="submit" class="btn">Submit Admission</button>
+            <div id="ack" class="ack" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- MANAGEMENT / STAFF -->
+    <section id="management" class="wrap" aria-labelledby="management-heading">
+      <div style="margin-bottom:18px">
+        <div id="management-heading" class="section-title">Management & Staff</div>
+        <div class="muted">Leadership, teachers and support staff who make Vathsalyam run.</div>
+      </div>
+
+      <div class="team-grid">
+        <!-- Principal -->
+        <div class="member">
+          <img src="images/service7.jpg" alt="Principal" loading="lazy">
+          <h4>Mrs. A. Principal</h4>
+          <p>Principal — Provides academic leadership and vision.</p>
+        </div>
+
+        <!-- Coordinator -->
+        <div class="member">
+          <img src="images/service6.jpg" alt="Coordinator" loading="lazy">
+          <h4>Mr. B. Coordinator</h4>
+          <p>Coordinator — Manages daily programs and liaises with community partners.</p>
+        </div>
+
+        <!-- Teacher -->
+        <div class="member">
+          <img src="images/service2.jpg" alt="Special Teacher" loading="lazy">
+          <h4>Ms. C. Teacher</h4>
+          <p>Special Educator — Works on academics and life skills.</p>
+        </div>
+
+        <!-- Driver -->
+        <div class="member">
+          <img src="images/service5.jpg" alt="Driver" loading="lazy">
+          <h4>Mr. D. Driver</h4>
+          <p>Driver & Support Staff — Ensures safe transport and support during events.</p>
+        </div>
+
+        <!-- Helper -->
+        <div class="member">
+          <img src="images/service8.jpg" alt="Helper" loading="lazy">
+          <h4>Ms. E. Helper</h4>
+          <p>Support Staff — Assists with daily activities and care.</p>
+        </div>
       </div>
     </section>
 
@@ -416,153 +497,153 @@
 
   </main>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <div>
-      <img src="" alt="" id="lightboxImg">
-      <div class="meta" id="lightboxCaption"></div>
+  <!-- LIGHTBOX (with arrows) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <div class="frame" style="display:flex;align-items:center;gap:12px">
+      <div class="lb-arrow lb-left" id="lbPrev" title="Previous" role="button" tabindex="0">&#9664;</div>
+      <div style="max-width:92%">
+        <img id="lbImg" src="" alt="">
+        <div class="lb-meta" id="lbCaption"></div>
+      </div>
+      <div class="lb-arrow lb-right" id="lbNext" title="Next" role="button" tabindex="0">&#9654;</div>
     </div>
   </div>
 
-  <!-- BACK TO TOP -->
-  <button id="toTop" title="Back to top">↑</button>
+  <button id="toTop" title="Back to top" aria-label="Back to top">↑</button>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="wrap">
-      <div style="font-weight:700;font-size:1rem">VATHSALYAM</div>
+      <div style="font-weight:700">VATHSALYAM</div>
       <div style="opacity:0.95;margin-top:6px">© 2025 Vathsalyam. All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- =========================
-       SCRIPTS
-       ========================= -->
+  <!-- ========== SCRIPTS ========== -->
   <script>
-  /* ---------------------------
-     Mobile menu toggle
-     --------------------------- */
+  /********** Mobile nav toggle **********/
   const hamburger = document.getElementById('hamburgerBtn');
   const mobileNav = document.getElementById('mobileNav');
-  const siteNav = document.querySelector('nav.site-nav');
-  hamburger.addEventListener('click', ()=> {
-    mobileNav.classList.toggle('show');
+  hamburger.addEventListener('click', () => mobileNav.classList.toggle('show'));
+  // close mobile nav on outside click
+  document.addEventListener('click', (e) => {
+    if(!mobileNav.contains(e.target) && !hamburger.contains(e.target) && mobileNav.classList.contains('show')){
+      mobileNav.classList.remove('show');
+    }
   });
-  // close mobile nav on link click
-  mobileNav.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> mobileNav.classList.remove('show')));
 
-  /* ---------------------------
-     Services entry animations
-     - IntersectionObserver to add .in-view
-     --------------------------- */
+  /********** Services entry animation (IntersectionObserver) **********/
   const serviceCards = document.querySelectorAll('.service-card');
   const serviceObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
-        // small stagger via index
-        const idx = Array.from(serviceCards).indexOf(entry.target);
-        entry.target.style.transitionDelay = (idx % 6) * 80 + 'ms';
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
+        const el = entry.target;
+        // small stagger based on position
+        const idx = Array.from(serviceCards).indexOf(el);
+        el.style.transition = `transform .7s cubic-bezier(.2,.9,.3,1) ${(idx%6)*0.08}s, opacity .6s ${(idx%6)*0.08}s`;
+        el.classList.add('in-view');
+        // remove offset classes to animate to neutral (if present)
+        el.classList.remove('anim-left','anim-right');
+        obs.unobserve(el);
       }
     });
-  }, {threshold: 0.18});
+  }, {threshold:0.18});
   serviceCards.forEach(c => serviceObserver.observe(c));
 
-  /* ---------------------------
-     Gallery data & render
-     - keep image list here; add files into images/gallery/
-     --------------------------- */
+  /********** Gallery data & render **********/
   const galleryItems = [
     {src:'images/gallery/onam1.jpg', tag:'onam', caption:'Onam Celebration 1'},
     {src:'images/gallery/onam2.jpg', tag:'onam', caption:'Onam Celebration 2'},
     {src:'images/gallery/schoolday1.jpg', tag:'schoolday', caption:'School Day 1'},
-    // independence images will be added later (empty now)
+    // add independence images later (tag: 'independence')
   ];
 
   const galleryGrid = document.getElementById('galleryGrid');
 
   function renderGallery(filter='all'){
     galleryGrid.innerHTML = '';
-    const filtered = galleryItems.filter(item => filter==='all' ? true : item.tag===filter);
+    const filtered = galleryItems.filter(it => filter==='all' ? true : it.tag===filter);
     if(filtered.length === 0){
-      if(filter === 'independence'){
-        const el = document.createElement('div');
-        el.className = 'gallery-coming';
-        el.textContent = 'Independence Day pictures will be available on 18.08.2025';
-        galleryGrid.appendChild(el);
-      } else {
-        const el = document.createElement('div');
-        el.className = 'gallery-coming';
-        el.textContent = 'No photos yet. Add images into images/gallery/';
-        galleryGrid.appendChild(el);
-      }
+      const el = document.createElement('div'); el.className='gallery-coming';
+      el.textContent = filter==='independence' ? 'Independence Day pictures will be available on 18.08.2025' : 'No photos yet. Add images into images/gallery/';
+      galleryGrid.appendChild(el);
       return;
     }
-    filtered.forEach(item=>{
+    filtered.forEach((item, i) => {
       const wrap = document.createElement('div');
       wrap.className = 'gallery-item';
+      wrap.dataset.index = i; // index in filtered array for lightbox logic
+      wrap.dataset.src = item.src;
       wrap.dataset.caption = item.caption;
-      const img = document.createElement('img');
-      img.src = item.src;
-      img.alt = item.caption || '';
+      const img = document.createElement('img'); img.src = item.src; img.alt = item.caption; img.loading='lazy';
       wrap.appendChild(img);
-      const cap = document.createElement('div');
-      cap.className = 'gallery-caption';
-      cap.textContent = item.caption.split(' ')[0];
+      const cap = document.createElement('div'); cap.className='gallery-caption'; cap.textContent = item.caption.split(' ')[0];
       wrap.appendChild(cap);
       galleryGrid.appendChild(wrap);
-
-      // click -> lightbox
-      wrap.addEventListener('click', ()=> openLightbox(item.src, item.caption));
+      wrap.addEventListener('click', ()=> openLightbox(filtered, i));
     });
   }
 
-  // initial load - show all
+  // initial
   renderGallery('all');
 
   function filterGallery(tag){
     renderGallery(tag);
-    // scroll to gallery
     document.getElementById('gallery').scrollIntoView({behavior:'smooth', block:'start'});
   }
 
-  /* ---------------------------
-     Lightbox
-     --------------------------- */
+  /********** Lightbox with prev/next **********/
   const lightbox = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  const lbCaption = document.getElementById('lightboxCaption');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbPrev = document.getElementById('lbPrev');
+  const lbNext = document.getElementById('lbNext');
+  let currentList = []; let currentIndex = 0;
 
-  function openLightbox(src, caption){
-    lbImg.src = src;
-    lbCaption.textContent = caption || '';
-    lightbox.classList.add('show');
-    lightbox.setAttribute('aria-hidden','false');
+  function openLightbox(list, index){
+    currentList = list;
+    currentIndex = index;
+    showLB();
   }
-  lightbox.addEventListener('click', (e)=>{
-    if(e.target === lightbox || e.target === lbImg) closeLightbox();
-  });
-  window.addEventListener('keydown', (e)=> { if(e.key === 'Escape') closeLightbox(); });
-  function closeLightbox(){ lightbox.classList.remove('show'); lightbox.setAttribute('aria-hidden','true'); lbImg.src=''; }
+  function showLB(){
+    const item = currentList[currentIndex];
+    lbImg.src = item.src;
+    lbImg.alt = item.caption || '';
+    lbCaption.textContent = item.caption || '';
+    lightbox.classList.add('show'); lightbox.setAttribute('aria-hidden','false');
+  }
+  function closeLB(){ lightbox.classList.remove('show'); lightbox.setAttribute('aria-hidden','true'); lbImg.src=''; }
+  function nextLB(){ if(currentList.length===0) return; currentIndex = (currentIndex+1)%currentList.length; showLB(); }
+  function prevLB(){ if(currentList.length===0) return; currentIndex = (currentIndex-1+currentList.length)%currentList.length; showLB(); }
 
-  /* ---------------------------
-     Back to Top
-     --------------------------- */
+  lbNext.addEventListener('click', (e)=> { e.stopPropagation(); nextLB(); });
+  lbPrev.addEventListener('click', (e)=> { e.stopPropagation(); prevLB(); });
+  lightbox.addEventListener('click', (e)=> { if(e.target===lightbox) closeLB(); });
+  window.addEventListener('keydown', (e)=> { if(e.key==='Escape') closeLB(); if(e.key==='ArrowRight') nextLB(); if(e.key==='ArrowLeft') prevLB(); });
+
+  /********** Admissions form (client-side acknowledgement) **********/
+  const form = document.getElementById('admissionsForm');
+  const ack = document.getElementById('ack');
+  form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+    const name = document.getElementById('nameInput').value.trim();
+    const phone = document.getElementById('phoneInput').value.trim();
+    const loc = document.getElementById('locInput').value.trim();
+    if(!name || !phone || !loc){ ack.style.display='block'; ack.textContent='Please fill all fields.'; ack.style.background='#fff4f0'; ack.style.color='#d44'; return; }
+    // show friendly acknowledgement
+    ack.style.display='block';
+    ack.textContent = `Thank you, ${name}! Our team will contact you shortly.`;
+    ack.style.background = '#f0fff4'; ack.style.color='#0b6b3d';
+    // optionally: here you could POST to an API / Google Sheet
+    form.reset();
+    setTimeout(()=> ack.style.display='none', 7000);
+  });
+
+  /********** Back to top button **********/
   const toTop = document.getElementById('toTop');
-  window.addEventListener('scroll', ()=> {
-    toTop.style.display = window.scrollY > 320 ? 'block' : 'none';
-  });
-  toTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+  window.addEventListener('scroll', ()=> { toTop.style.display = window.scrollY > 320 ? 'block' : 'none'; });
+  toTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}) );
 
-  /* ---------------------------
-     Accessibility: close mobile nav on outside click
-     --------------------------- */
-  document.addEventListener('click', (e)=> {
-    if(!mobileNav.contains(e.target) && !hamburger.contains(e.target) && mobileNav.classList.contains('show')){
-      mobileNav.classList.remove('show');
-    }
-  });
+  /********** Accessibility: close mobile nav on outside click handled above **********/
 
   </script>
 
